@@ -1,0 +1,79 @@
+:root {
+  --background-bar: rgb(43, 43, 43);
+  --image-title: rgba(0, 161, 225, 0.484);
+  --menu-text: rgb(153, 153, 153);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* menu cambia a 768px */
+
+aside {
+  width: 200px;
+  height: 100%;
+  background-color: var(--background-bar);
+  color: var(--menu-text);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.padding-remove {
+  padding: 0;
+}
+
+div > h3 {
+  position: absolute;
+  padding: 5px;
+  bottom: 0;
+  background-color: var(--image-title);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  color: white;
+}
+
+ul.menu li {
+  border-bottom: 1px solid black;
+  height: 50px;
+  width: 100%;
+  .active {
+    color: white !important;
+  }
+  a {
+    text-transform: uppercase;
+
+    :first-child {
+      margin: 0 8px 0 25px;
+    }
+  }
+  a:link,
+  a:visited {
+    color: var(--menu-text);
+  }
+  a:hover,
+  a:active {
+    color: white;
+  }
+}
+
+.social ul li a {
+  color: var(--menu-text);
+}
+
+main {
+  flex-grow: 1;
+  display: absolute;
+  overflow: hidden hidden;
+  section {
+    height: 100%;
+  }
+}
