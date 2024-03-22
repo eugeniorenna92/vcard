@@ -135,11 +135,20 @@ main {
 }
 
 section#home {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  img {
+    z-index: -1;
+    bottom: -70px;
+    right: 0;
+  }
+
   .text-cursor, .text-cursor {
     display: inherit;
     height: 35px;
     width: 3px;
-    background-color: #00000080;
+    background-color: #ffffff80;
     margin: 0 2px 9px;
     animation: pulse .8s infinite;
   }

@@ -17,9 +17,9 @@ class Typed {
  * Animazione per scrivere il testo della sezione Home.
  */
 function writeTypedText() {
-  let nome = new Typed(document.getElementById("name"), "Nome "); // Lascia lo spazio finale
-  let cognome = new Typed(document.getElementById("surname"), "Cognome");
-  let sottotitolo = new Typed(document.getElementById("subtitle"), "Il tuo sviluppatore web di fiducia");
+  let nome = new Typed(document.getElementById("name"), "Enrico "); // Lascia lo spazio finale
+  let cognome = new Typed(document.getElementById("surname"), "Renna");
+  let sottotitolo = new Typed(document.getElementById("subtitle"), "La renna di cui non pensavi di aver bisogno!");
 
   // Animazione
   typedText = (element, text, i = 0) => {
