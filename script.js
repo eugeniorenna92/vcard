@@ -14,9 +14,11 @@ class Typed {
 
 
 /**
- * Animazione per scrivere il testo della sezione Home.
+ * Funzione che fa partire la scrittura del testo della sezione Home.
  */
 function writeTypedText() {
+  let cursori = document.querySelectorAll("span.text-cursor");
+
   let nome = new Typed(document.getElementById("name"), "Enrico "); // Lascia lo spazio finale
   let cognome = new Typed(document.getElementById("surname"), "Renna");
   let sottotitolo = new Typed(document.getElementById("subtitle"), "La renna di cui non pensavi di aver bisogno!");
@@ -27,15 +29,16 @@ function writeTypedText() {
     
     // Quando finisce di scrivere
     if (i === text.length - 1) {
-      // Scrive il cognome
+      // Inizia a scrivere il cognome
       if (element === nome.element) typedText(cognome.element, cognome.text);
-      // Scrive il sottotitolo
+      // Inizia a scrivere il sottotitolo
       if (element === cognome.element) {
-        let cursors = document.querySelectorAll("span.text-cursor");
-        cursors[0].classList.add("d-none");
-        cursors[1].classList.remove("d-none");
+        cursori[0].classList.add("d-none");
+        cursori[1].classList.remove("d-none");
         typedText(sottotitolo.element, sottotitolo.text);
       }
+      // Ha scritto tutto
+      // else cursori[1].classList.add("d-none");
       return;
     }
     
