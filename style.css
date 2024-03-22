@@ -139,9 +139,13 @@ section#home {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 
   img {
+    position: relative;
     z-index: -1;
-    bottom: -70px;
-    right: 0;
+    bottom: 150px;
+  }
+
+  div#context {
+    width: calc(100vw - 200px);
   }
 
   .text-cursor, .text-cursor {

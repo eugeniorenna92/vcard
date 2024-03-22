@@ -77,11 +77,9 @@ addEventListener("hashchange", (event) => {
   const id = hash.split("").slice(1).join("");
   const element = document.querySelector("a#a-" + id);
   
-  if (!!element) {
-    const active = document.querySelector(".active");
-    if (!!active) active.classList.remove("active");
-    element.classList.add("active");
-  }
+  const active = document.querySelector(".active");
+  if (!!active) active.classList.remove("active");
+  element.classList.add("active");
 
   if (hash === "#home" && !isWritten) {
     writeTypedText();
