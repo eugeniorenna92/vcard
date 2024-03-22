@@ -135,18 +135,13 @@ main {
 }
 
 section#home {
+  background-image: url(./assets/saad-chaudhry-pM2Hpsi-Hxs-unsplash.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-
-  img {
-    position: relative;
-    z-index: -1;
-    bottom: 150px;
-  }
-
-  div#context {
-    width: calc(100vw - 200px);
-  }
 
   .text-cursor, .text-cursor {
     display: inherit;
