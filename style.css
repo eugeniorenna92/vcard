@@ -143,13 +143,14 @@ section#home {
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 
-  .text-cursor, .text-cursor {
+  .text-cursor {
     display: inherit;
     height: 35px;
     width: 3px;
-    background-color: #ffffff80;
+    background-color: #ffffffbf;
     margin: 0 2px 9px;
     animation: pulse .8s infinite;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
   span.text-cursor.first {
     height: 60px;
