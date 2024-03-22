@@ -22,11 +22,17 @@
 }
 
 h1 {
-  text-transform: uppercase;
-  font-family: Playfair-Display;
-  font-weight: 700;
-  font-size: 70px;
   margin-bottom: 30px;
+
+  span {
+    text-transform: uppercase;
+    font-family: Playfair-Display;
+    font-weight: 500;
+    font-size: 70px;
+  }
+  span#surname {
+    font-weight: 900;
+  }
 }
 
 h2 {
@@ -129,7 +135,7 @@ main {
 }
 
 section#home {
-  .text-cursor-h1, .text-cursor-h3 {
+  .text-cursor, .text-cursor {
     display: inherit;
     height: 35px;
     width: 3px;
@@ -137,9 +143,9 @@ section#home {
     margin: 0 2px 9px;
     animation: pulse .8s infinite;
   }
-  .text-cursor-h1 {
+  span.text-cursor.first {
     height: 60px;
-    margin: 0 2px 20px;
+    margin: 0 2px 21px;
   }
 }
 

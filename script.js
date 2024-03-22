@@ -1,27 +1,48 @@
 /**
+ * Classe usata per il testo da scrivere nella sezione Home.
+ */
+class Typed {
+  element;
+  text;
+
+  constructor(element, text) {
+    this.element = element;
+    this.text = text;
+  }
+}
+
+
+
+/**
  * Animazione per scrivere il testo della sezione Home.
  */
 function writeTypedText() {
-  const title = "Nome Cognome";
-  const subtitle = "Il tuo sviluppatore web di fiducia";
-  let h1 = document.getElementById("title");
-  let h2 = document.getElementById("subtitle");
+  let nome = new Typed(document.getElementById("name"), "Nome "); // Lascia lo spazio finale
+  let cognome = new Typed(document.getElementById("surname"), "Cognome");
+  let sottotitolo = new Typed(document.getElementById("subtitle"), "Il tuo sviluppatore web di fiducia");
 
   // Animazione
   typedText = (element, text, i = 0) => {
     element.textContent += text[i];
+    
+    // Quando finisce di scrivere
     if (i === text.length - 1) {
-      if (element === h1) {
-        document.querySelector("span.text-cursor-h1").classList.add("d-none");
-        document.querySelector("span.text-cursor-h3").classList.remove("d-none");
-        typedText(h2, subtitle);
+      // Scrive il cognome
+      if (element === nome.element) typedText(cognome.element, cognome.text);
+      // Scrive il sottotitolo
+      if (element === cognome.element) {
+        let cursors = document.querySelectorAll("span.text-cursor");
+        cursors[0].classList.add("d-none");
+        cursors[1].classList.remove("d-none");
+        typedText(sottotitolo.element, sottotitolo.text);
       }
       return;
     }
+    
     setTimeout(() => typedText(element, text, ++i), 50);
   }
 
-  typedText(h1, title);
+  typedText(nome.element, nome.text);
 }
 
 
