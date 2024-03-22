@@ -12,8 +12,8 @@ function writeTypedText() {
     element.textContent += text[i];
     if (i === text.length - 1) {
       if (element === h1) {
-        document.querySelector("span.text-cursor-h1").classList.add("displayNone");
-        document.querySelector("span.text-cursor-h2").classList.remove("displayNone");
+        document.querySelector("span.text-cursor-h1").classList.add("d-none");
+        document.querySelector("span.text-cursor-h2").classList.remove("d-none");
         typedText(h2, subtitle);
       }
       return;
@@ -31,7 +31,7 @@ window.onload = () => {
   let loader = document.getElementById("loader");
   loader.classList.add("hide");
   setTimeout(() => {
-    loader.classList.add("displayNone");
+    loader.classList.add("d-none");
 
     if (window.location.hash === "#home") writeTypedText();
   }, 1000);

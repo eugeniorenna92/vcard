@@ -126,10 +126,6 @@ main {
   transition: opacity 1s;
 }
 
-.displayNone {
-  display: none !important;
-}
-
 section#home {
   .text-cursor-h1, .text-cursor-h2 {
     display: inherit;
