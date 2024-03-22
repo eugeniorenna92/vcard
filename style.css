@@ -57,12 +57,14 @@ ul.social-list > li {
 }
 
 h3 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+div > h3.image-name {
   font-family: Playfair-Display;
   font-weight: 700;
   font-size: 20px;
-}
-
-div > h3 {
   position: absolute;
   bottom: 0;
   background-color: var(--image-title);
@@ -127,9 +129,9 @@ main {
 }
 
 section#home {
-  .text-cursor-h1, .text-cursor-h2 {
+  .text-cursor-h1, .text-cursor-h3 {
     display: inherit;
-    height: 40px;
+    height: 35px;
     width: 3px;
     background-color: #00000080;
     margin: 0 2px 9px;
@@ -140,7 +142,8 @@ section#home {
     margin: 0 2px 20px;
   }
 }
-  
+
+/* Animazione del cursore della sezione Home */
 @keyframes pulse {
   50% { opacity: 0; }
 }

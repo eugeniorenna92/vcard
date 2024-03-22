@@ -13,7 +13,7 @@ function writeTypedText() {
     if (i === text.length - 1) {
       if (element === h1) {
         document.querySelector("span.text-cursor-h1").classList.add("d-none");
-        document.querySelector("span.text-cursor-h2").classList.remove("d-none");
+        document.querySelector("span.text-cursor-h3").classList.remove("d-none");
         typedText(h2, subtitle);
       }
       return;
